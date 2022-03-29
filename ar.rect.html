@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get value of fname and lname</title>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: bisque;
+        background: linear-gradient(to bottom right, rgba(255, 81, 0, 0.802) ,rgba(66, 66, 218, 0.494));
+    }
+     #form{
+         
+         width: 100vw;
+         height: 100vh;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    input{
+        width: 150px;
+        margin-bottom: 20px;
+        border: 1px solid blue;
+    
+    }
+    #btn{
+        box-shadow: -1px 2px green;
+        width: 70px;
+        height: 25px;
+    }
+    input::placeholder{
+        font-size: 10px;
+    
+    }
+    </style>
+</head>
+<body>
+    <div class="submit">
+        <form id="form" onsubmit="value">
+            <h1 style="margin-bottom: 70px;">Area of rectangle</h1>
+            Length :<input type="number" id="len" name="fname" placeholder="Enter length of rectangle">
+            Breadth : <input type="number" id="bre" name="lname" placeholder="Enter bredth of rectangle">
+            <button type="button" id="btn" >Cal</button>
+            <h2 id="ar">Your area is : </h2>
+        </form>
+    </div>
+    <script>
+        // var a="2";
+        document.getElementById('btn').addEventListener('click',cal);
+    function cal(){
+        let l=document.getElementById('len').value;
+        let b=document.getElementById('bre').value;
+        let area=l*b;
+document.getElementById('ar').innerHTML+=(area+" cm ")
+// console.log("helo"); 
+    }
+    // window.onload = document.getElementById('form').onsubmit = area;  
+    </script>
+</body>
+</html>
